@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { FaBars, FaCheck, FaToolbox } from 'react-icons/fa';
 
 function ThemesList({handleClick, currentTheme}) {
@@ -46,7 +46,9 @@ function Header({onChangeTheme, currentTheme}) {
   return(
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl"><FaToolbox />&nbsp;&nbsp;Toolboxer</a>
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          <FaToolbox />&nbsp;&nbsp;Toolboxer
+        </Link>
       </div>
       <div className="flex-none gap-2">
         {/* <div className="form-control">
